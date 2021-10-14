@@ -1,7 +1,9 @@
 package FunctionaInterface;
 
 interface Calculator{
-	void swithOn();
+	//void swithOn();
+	
+	void sum(int input);
 }
 
 public class CalculatorImp {
@@ -11,10 +13,16 @@ public class CalculatorImp {
 	// ()  ->    {body};
 	
 	public static void main(String[] args) {
-		Calculator calculator = ()-> {
+	/**	Calculator calculator = ()-> {
 			System.out.println("Swith on");
 		};
-		calculator.swithOn();
+		calculator.swithOn();*/
+		
+		Calculator calculator=(input) -> {
+			System.out.println("sum :"+input);
+		};
+		
+		calculator.sum(8);
 	}
 }
 
