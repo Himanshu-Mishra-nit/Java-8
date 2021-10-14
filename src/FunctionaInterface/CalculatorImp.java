@@ -1,5 +1,7 @@
 package FunctionaInterface;
 
+import javax.management.RuntimeErrorException;
+
 interface Calculator{
 	//void swithOn();
 	
@@ -27,6 +29,8 @@ public class CalculatorImp {
 		calculator.sum(8);*/
 		
 		Calculator calculator=( i1, i2)->{
+			if(i2<i1)
+				throw new RuntimeException("Dummy");
 			return i2-i1;
 		};
 		Calculator calculator1=( i1, i2)-> i2-i1;
